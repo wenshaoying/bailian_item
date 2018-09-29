@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+ul ol li dl dd{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style:none;
+}
+
+body{
+	font-size:12px;
+}
+a{
+	text-decoration:none;
+}
+.wrap{
+	width:1190px;
+	margin:0 auto;
+}
+
+@import "header";
+
+
+
+.main{
+	width: 1190px;
+	margin: 20px auto;
+
+}
+
+// 尾部
+.footer{
+	min-width: 1190px;
+	background: #f3f3f3;
+	padding-top: 30px;
+
+}
+
+@import "footer";
