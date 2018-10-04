@@ -3,6 +3,21 @@
 /* Document
    ========================================================================== */
 
+
+img{
+  border:0;
+  outline: 0;
+}
+
+
+button, del, input, ins, li, ol, select, table, td, textarea, th, tr, ul, dl, dd,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+li{
+  list-style:none;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -23,6 +38,7 @@ html {
 body {
   margin: 0;
 }
+
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
