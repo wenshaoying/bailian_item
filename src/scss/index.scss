@@ -582,14 +582,7 @@ a{
 		}
 	}
 }
-// 尾部
-.footer{
-	min-width: 1190px;
-	background: #f3f3f3;
-	padding-top: 30px;
-	margin-top: 40px;
 
-}
 //楼梯导航
 .louti{
 	width: 50px;
@@ -634,22 +627,13 @@ a{
 	}
 }
 
-// 侧边栏
-.right_side{
-	height: 570px;
-	width: 314px;
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: #fff;
-	z-index: 199;
-	.side_nav{
-		width: 38xp;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		background: #333;
-	}
+// 尾部
+.footer{
+	min-width: 1190px;
+	background: #f3f3f3;
+	padding-top: 30px;
+	margin-top: 40px;
+
 }
+
 @import "footer";

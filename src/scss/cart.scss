@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+//清除浮动后的高度塌陷
+@mixin clearfix() {
+  &:after {
+    content: " "; 
+    display: block; 
+    clear: both;
+	}
+}
+
+// 头部
+
+.wrap{
+	width: 950px;
+	margin: 0 auto;
+}
+//头部
+.cart_header_bottom{
+	height: 110px;
+    border-bottom: 1px solid #ddd;
+	.logo{
+		width: 170px;
+		margin-top: 29px;
+		float: left;
+		.logo_img{
+			display: inline;
+			float: left;
+		}
+		
+	}
+	.title{
+		width: 170px;
+	    height: 44px;
+	    line-height: 44px;
+	    float: left;
+	    display: inline;
+	    color: #666;
+	    font-size: 22px;
+	    margin: 30px 0 0 10px;
+	}
+	.login-message {
+	    width: auto;
+	    height: 24px;
+	    line-height: 24px;
+	    color: #333;
+	    float: right;
+	    display: inline;
+	    margin: 60px 4px 0 0;
+	    a {
+		    color: #e6133c;
+		    text-decoration: none;
+		    font-weight: 700;
+		    &:hover{
+		    	text-decoration:underline;
+		    }
+		}
+	}
+}
+
+//主体部分
+.cart_main{
+	width: 990px;
+	margin: 0 auto;
+	@include clearfix();
+	.cart-title {
+	    width: 990px;
+	    height: 51px;
+	    border-bottom: 1px solid #ccc;
+	    float: left;
+	    display: inline;
+	   .name {
+		    width: auto;
+		    height: 32px;
+		    line-height: 32px;
+		    padding: 0 6px;
+		    margin-top: 18px;
+		    float: left;
+		    display: inline;
+		    border-bottom: 2px solid #333;
+		    color: #333;
+		    font-size: 16px;
+		    font-weight: 700;
+		    span {
+			    color: #e6133c;
+			    margin-left: 4px;
+			}
+		}
+		.send-message {
+		    width: auto;
+		    height: 48px;
+		    line-height: 48px;
+		    float: right;
+		    display: inline;
+		    margin-top: 3px;
+		    color: #333;
+		    .message-name {
+			    color: #666;
+			    width: auto;
+			    float: left;
+			    display: inline;
+			    margin-right: 4px;
+			}
+			.address-line {
+			    width: auto;
+			    height: 24px;
+			    border: 1px solid #ddd;
+			    margin-top: 10px;
+			    float: left;
+			    display: inline;
+			    position: relative;
+			}
+			.address-name {
+			    width: auto;
+			    padding: 0 30px 0 10px;
+			    line-height: 24px;
+			    position: relative;
+			    float: left;
+			    display: inline;
+			    color: #333;
+			    cursor: pointer;
+			    background: #fff;
+			    i {
+				    width: 0;
+				    height: 0;
+				    border: 5px solid transparent;
+				    border-top: 5px solid #999;
+				    position: absolute;
+				    right: 5px;
+				    top: 9px;
+				    float: left;
+				    display: inline;
+				}
+			}
+			.address-list {
+			    width: 378px;
+			    height: auto;
+			    border: 1px solid #ddd;
+			    float: left;
+			    position: absolute;
+			    top: 24px;
+			    right: -1px;
+			    display: none;
+			    background: #fff;
+			    .txt {
+				    width: 358px;
+				    height: 24px;
+				    line-height: 24px;
+				    margin: 10px 0 0 10px;
+				    float: left;
+				    display: inline;
+				    color: #666;
+				}
+				.line {
+				    width: 358px;
+				    max-height: 48px;
+				    line-height: 24px;
+				    float: left;
+				    display: inline;
+				    overflow: hidden;
+				    margin-left: 10px;
+				}
+			}
+		}
+		.address-tab-form {
+		    width: 360px;
+		    height: auto;
+		    float: left;
+		    display: inline;
+		    margin: 16px 0 0 10px;
+		}
+		.tab {
+		    width: 360px;
+		    height: 32px;
+		    border-bottom: 1px solid #ddd;
+		    float: left;
+		    display: inline;
+		}
+	}
+	.cart-table {
+	    width: 990px;
+	    height: auto;
+	    float: left;
+	    display: inline;
+	    .cart-head {
+		    width: 990px;
+		    height: 44px;
+		    line-height: 44px;
+		    color: #333;
+		    float: left;
+		    display: inline;
+		    border-bottom: 1px solid #ccc;
+		    .chk-line {
+			    width: 50px;
+			    height: 44px;
+			    line-height: 44px;
+			    float: left;
+			    display: inline;
+			    margin-left: 15px;
+			    .chk {
+				    margin-top: 17px;
+				    float: left;
+				    display: inline;
+				    width: 10px;
+				    height: 10px;
+				    border-radius: 3px;
+				    cursor: pointer;
+				    border: 1px solid #999;
+				}
+				.name {
+				    height: 44px;
+				    line-height: 44px;
+				    margin-left: 10px;
+				    float: left;
+				    display: inline;
+				}
+			}
+			.select .chk {
+			    border-color: #d62233;
+			    background: url(../images/select.png) #d62233 no-repeat;
+			}
+			.item {
+			    width: 390px;
+			    height: auto;
+			    height: 44px;
+			    line-height: 44px;
+			    float: left;
+			    display: inline;
+			    margin-left: 80px;
+			}
+			.item-price {
+			    width: 138px;
+			    height: auto;
+			    height: 44px;
+			    line-height: 44px;
+			    float: left;
+			    display: inline;
+			}
+			.number {
+			    width: 102px;
+			    height: auto;
+			    height: 44px;
+			    line-height: 44px;
+			    float: left;
+			    display: inline;
+			}
+			.total-price {
+			    width: 132px;
+			    height: auto;
+			    height: 44px;
+			    line-height: 44px;
+			    float: left;
+			    display: inline;
+			}
+			.action {
+			    width: 64px;
+			    height: auto;
+			    height: 44px;
+			    line-height: 44px;
+			    float: left;
+			    display: inline;
+			}
+		}
+		.no-points {
+		    width: 990px;
+		    height: 200px;
+		    float: left;
+		    display: inline;
+		     i {
+			    width: 63px;
+			    height: 76px;
+			    float: left;
+			    display: inline;
+			    background: url(../images/V3empty.png) no-repeat;
+			    margin: 50px 20px 0 290px;
+			}
+			.message {
+			    color: #666;
+			    font-family: "Microsoft YaHei";
+			    font-size: 16px;
+			    float: left;
+			    display: inline;
+			    width: 400px;
+			    margin-top: 80px;
+			}
+			.txt {
+			    color: #666;
+			    font-family: "Microsoft YaHei";
+			    float: left;
+			    display: inline;
+			    width: 400px;
+			     a {
+				    color: #0077d7;
+				    &:hover{
+				    	text-decoration:underline;
+				    }
+				}
+			}
+		}
+	}
+}
+
+//尾部
+.cart_footer{
+	margin-top: 30px;
+	background: #f3f3f3;
+	.footer_top{
+		padding-top: 30px;
+		background: #f3f3f3;
+		
+	}
+	.footer_bottom{
+		background: #fff;
+		
+	}
+}

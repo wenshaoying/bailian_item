@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="cart_header">
+		<div class="cart_header_top"></div>
+		<div class="cart_header_bottom">
+			<div class="wrap">
+				<div class="logo">
+					<div class="logo_img">
+						<a href="index.html">
+							<img src="images/logon-logo.png" alt="">
+						</a>
+					</div>
+					
+				</div>
+				<div class="title">
+						购物车
+				</div>
+				<div class="login-message"> 现在&nbsp;<a href="javascript:void(0);" onclick="login()">登录</a>,您购物车中的商品将会被永久保存</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主体内容 -->
+	<div class="cart_main">
+		<div class="cart-title">
+			<input type="hidden" id="orderAmount" value="2699.00">
+			<input type="hidden" id="btnTag" value="">
+			<div class="name">全部商品<span>0</span></div>
+			<div class="send-message">
+				<div class="message-name">配送至</div>
+				<div class="address-line">
+					<div class="address-name">
+						<span id="provinceName">
+						 	上海市
+						 	<input class="provinceId" value="866" type="hidden">
+						 	<input class="provinceId" type="hidden" name="provinceId" value="undefined"></span>
+						<span id="cityName">
+							市直辖
+							<input class="cityId" value="867" type="hidden">
+							<input class="cityId" type="hidden" name="cityId" value="undefined"></span>
+						<span id="districtName">
+							黄浦区
+							<input class="districtId" value="868" type="hidden">
+							<input class="districtId" type="hidden" name="districtId" value="undefined"></span>
+						<i></i>
+					</div>
+					<div class="address-list">
+						<div class="txt">常用地址：</div>
+						<div class="line">
+						</div>
+						<div class="address-tab-form">
+							<ul class="tab">
+								<li class="select" id="sheng" onclick="selectArea('sheng')"><span>省份</span><i></i><em></em></li>
+								<li id="shi" onclick="selectArea('shi')"><span>城市</span><i></i><em></em></li>
+								<li id="qu" onclick="selectArea('qu')"><span>县区</span><i></i><em></em></li>
+							</ul>
+							<ul class="tab-list" id="provinceNameSelect">
+								<li class="select" id="selectCity">
+									<dd>
+								<a id="1134_new1" href="javascript:void(0);" onclick="queryAreaList('1134_new1',2,'','1134','1134', '')">安徽省</a>
+																</dd>
+															<dd>
+								<a id="3524_new1" href="javascript:void(0);" onclick="queryAreaList('3524_new1',2,'','3524','3524', '')">澳门特别行政区</a>
+																</dd>
+															<dd>
+								<a id="2_new1" href="javascript:void(0);" onclick="queryAreaList('2_new1',2,'','2','2', '')">北京市</a>
+																</dd>
+															<dd>
+								<a id="2477_new1" href="javascript:void(0);" onclick="queryAreaList('2477_new1',2,'','2477','2477', '')">重庆市</a>
+																</dd>
+															<dd>
+								<a id="1274_new1" href="javascript:void(0);" onclick="queryAreaList('1274_new1',2,'','1274','1274', '')">福建省</a>
+																</dd>
+															<dd>
+								<a id="3207_new1" href="javascript:void(0);" onclick="queryAreaList('3207_new1',2,'','3207','3207', '')">甘肃省</a>
+																</dd>
+															<dd>
+								<a id="2148_new1" href="javascript:void(0);" onclick="queryAreaList('2148_new1',2,'','2148','2148', '')">广东省</a>
+																</dd>
+															<dd>
+								<a id="2310_new1" href="javascript:void(0);" onclick="queryAreaList('2310_new1',2,'','2310','2310', '')">广西壮族自治区</a>
+																</dd>
+															<dd>
+								<a id="2742_new1" href="javascript:void(0);" onclick="queryAreaList('2742_new1',2,'','2742','2742', '')">贵州省</a>
+																</dd>
+															<dd>
+								<a id="2448_new1" href="javascript:void(0);" onclick="queryAreaList('2448_new1',2,'','2448','2448', '')">海南省</a>
+																</dd>
+															<dd>
+								<a id="44_new1" href="javascript:void(0);" onclick="queryAreaList('44_new1',2,'','44','44', '')">河北省</a>
+																</dd>
+															<dd>
+								<a id="710_new1" href="javascript:void(0);" onclick="queryAreaList('710_new1',2,'','710','710', '')">黑龙江省</a>
+																</dd>
+															<dd>
+								<a id="1675_new1" href="javascript:void(0);" onclick="queryAreaList('1675_new1',2,'','1675','1675', '')">河南省</a>
+																</dd>
+															<dd>
+								<a id="1869_new1" href="javascript:void(0);" onclick="queryAreaList('1869_new1',2,'','1869','1869', '')">湖北省</a>
+																</dd>
+															<dd>
+								<a id="1998_new1" href="javascript:void(0);" onclick="queryAreaList('1998_new1',2,'','1998','1998', '')">湖南省</a>
+																</dd>
+															<dd>
+								<a id="888_new1" href="javascript:void(0);" onclick="queryAreaList('888_new1',2,'','888','888', '')">江苏省</a>
+																</dd>
+															<dd>
+								<a id="1378_new1" href="javascript:void(0);" onclick="queryAreaList('1378_new1',2,'','1378','1378', '')">江西省</a>
+																</dd>
+															<dd>
+								<a id="632_new1" href="javascript:void(0);" onclick="queryAreaList('632_new1',2,'','632','632', '')">吉林省</a>
+																</dd>
+															<dd>
+								<a id="503_new1" href="javascript:void(0);" onclick="queryAreaList('503_new1',2,'','503','503', '')">辽宁省</a>
+																</dd>
+															<dd>
+								<a id="381_new1" href="javascript:void(0);" onclick="queryAreaList('381_new1',2,'','381','381', '')">内蒙古自治区</a>
+																</dd>
+															<dd>
+								<a id="3373_new1" href="javascript:void(0);" onclick="queryAreaList('3373_new1',2,'','3373','3373', '')">宁夏回族自治区</a>
+																</dd>
+															<dd>
+								<a id="3320_new1" href="javascript:void(0);" onclick="queryAreaList('3320_new1',2,'','3320','3320', '')">青海省</a>
+																</dd>
+															<dd>
+								<a id="1500_new1" href="javascript:void(0);" onclick="queryAreaList('1500_new1',2,'','1500','1500', '')">山东省</a>
+																</dd>
+															<dd>
+								<a id="866_new1" href="javascript:void(0);" onclick="queryAreaList('866_new1',2,'','866','866', '')">上海市</a>
+																</dd>
+															<dd>
+								<a id="239_new1" href="javascript:void(0);" onclick="queryAreaList('239_new1',2,'','239','239', '')">山西省</a>
+																</dd>
+															<dd>
+								<a id="3079_new1" href="javascript:void(0);" onclick="queryAreaList('3079_new1',2,'','3079','3079', '')">陕西省</a>
+																</dd>
+															<dd>
+								<a id="2521_new1" href="javascript:void(0);" onclick="queryAreaList('2521_new1',2,'','2521','2521', '')">四川省</a>
+																</dd>
+															<dd>
+								<a id="3522_new1" href="javascript:void(0);" onclick="queryAreaList('3522_new1',2,'','3522','3522', '')">台湾省</a>
+																</dd>
+															<dd>
+								<a id="23_new1" href="javascript:void(0);" onclick="queryAreaList('23_new1',2,'','23','23', '')">天津市</a>
+																</dd>
+															<dd>
+								<a id="3523_new1" href="javascript:void(0);" onclick="queryAreaList('3523_new1',2,'','3523','3523', '')">香港特别行政区</a>
+																</dd>
+															<dd>
+								<a id="2997_new1" href="javascript:void(0);" onclick="queryAreaList('2997_new1',2,'','2997','2997', '')">西藏自治区</a>
+																</dd>
+															<dd>
+								<a id="3405_new1" href="javascript:void(0);" onclick="queryAreaList('3405_new1',2,'','3405','3405', '')">新疆维吾尔自治区</a>
+																</dd>
+															<dd>
+								<a id="2843_new1" href="javascript:void(0);" onclick="queryAreaList('2843_new1',2,'','2843','2843', '')">云南省</a>
+																</dd>
+															<dd>
+								<a id="1021_new1" href="javascript:void(0);" onclick="queryAreaList('1021_new1',2,'','1021','1021', '')">浙江省</a>
+																</dd>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-table">
+			<div class="cart-head">
+				<label class="chk-line select">
+				  <div class="chk" onclick="checkBox(this)" style="display: none;"></div>
+				  <span class="name">全选</span>
+				</label>
+				<div class="item">商品信息</div>
+				<div class="item-price">单价（元）</div>
+				<div class="number">件数</div>
+				<div class="total-price">金额（元）</div>
+				<div class="action">操作</div>	
+			<!--购物车为空时的状态  -->
+			</div><div class="no-points"><i></i><div class="message">购物车快饿扁了 /(ToT)/~~</div><div class="txt">尝试买些东西再回来看看，快去 <a href="index.html">i百联首页</a> 挑选商品吧！</div>	</div>
+			
+			<!-- 购物车中有商品时的状态 -->
+			 <div class="cart-table-name">
+			 	<label id="zu" class="chk-line select">
+			 		<div class="chk" onclick="checkBox(this)">
+			 			
+			 		</div> 
+			 		<i class="bl"></i> 
+			 		<span class="name">i百联自营</span>
+			 	</label>
+			 </div>
+
+			 <!-- 商品列表 -->
+			 <ul class="cart-table-list">
+			 	<li>
+			 		<div class="item select" id="pr-zh">
+			 			<div class="cart-table-line">
+			 				<div class="chk-line">
+			 					<div class="chk" onclick=" checkBox(this,2)">
+			 						
+			 					</div>
+			 				</div>
+			 				<div class="item-box">
+			 					<a target="blank" href="http://product.bl.com/3253351.html?bl_ad=shop_-_pc_shop_-_2" title="【官方授权】Apple MQGJ2FE/A 原装Apple usb-c 至 Lightning 连接线 (1 米)"> 
+			 						<img src="http://Img.iblimg.com/photo-42/3020/480443263_200x200.jpg">
+			 					</a>
+			 					<div class="name">
+			 						<a target="blank" href="http://product.bl.com/3253351.html" title="【官方授权】Apple MQGJ2FE/A 原装Apple usb-c 至 Lightning 连接线 (1 米)"> 【官方授权】Apple MQGJ2FE/A 原装Apple ... 
+			 						</a>
+			 					</div>
+			 					<div class="message-line">
+			 						
+			 					</div>
+			 				</div>
+			 				<div class="type-box">
+			 					
+			 				</div>
+			 				<div class="item-price-box">
+			 					<div class="price">¥158.00
+			 					</div>
+			 					<div class="icon">
+			 						
+			 					</div>
+			 				</div>
+			 				<div class="number-box">
+			 					<div class="input-line">
+			 						<em class="reduce disable">-</em> 
+			 						<input class="text" onchange="inputUpdata(this,2)" type="text" value="1"> 
+			 						<em class="add" onclick="upButton(this,2)">+</em>
+			 					</div>
+			 					<div class="error">库存紧张</div>
+			 				</div>
+			 				<div class="price-box">
+			 					<div class="price">¥158.00</div>
+			 				</div>
+			 				<div class="action-box">
+			 					<a class="add-favourite" href="javascript:void(0);" onclick="addFavorite(this)">移入收藏夹</a> <br>
+			 					<a class="delete" href="javascript:void(0);" onclick="removeGoods(this)">删除</a>
+			 				</div>
+			 			</div>
+			 		</div>
+			 	</li>
+			 </ul>
+		</div>
+	</div>
+	<!--尾部  -->
+	<div class="cart_footer"></div>
+
+
+	<!-- script -->
+<script src="script/thirdplugins/jquery.js"></script>
+<script src="script/js/cart.js"></script>
+</body>
+</html>

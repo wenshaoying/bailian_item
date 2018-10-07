@@ -1,0 +1,171 @@
+body {
+  background: #f9f9f8;
+}
+
+.wrap {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.register_header {
+  height: 110px;
+}
+.register_header .logo {
+  margin-top: 29px;
+  float: left;
+}
+.register_header .logo .logo_img {
+  display: inline;
+  float: left;
+}
+.register_header .logo .title {
+  display: inline;
+  float: left;
+}
+
+.register_main {
+  background: #fff;
+  border: 1px solid #e1dfda;
+}
+.register_main .main_top {
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e1dfda;
+}
+.register_main .main_top .title_wel {
+  float: left;
+  font-size: 16px;
+  color: #ff002a;
+}
+.register_main .main_top .title_login {
+  float: right;
+  color: #63625d;
+}
+.register_main .main_top .title_login a {
+  color: #0088cc;
+}
+.register_main .main_bottom {
+  height: auto;
+  padding: 50px 0 74px 191px;
+}
+.register_main .main_bottom .login_data {
+  padding: 10px 0;
+}
+.register_main .main_bottom .login_data .name {
+  font-size: 15px;
+  color: #333;
+  float: left;
+  width: 136px;
+  text-align: right;
+  line-height: 36px;
+}
+.register_main .main_bottom .login_data .name i {
+  color: #df3d36;
+}
+.register_main .main_bottom .login_data:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.register_main .main_bottom .login_data ul {
+  float: left;
+  line-height: 36px;
+  margin-left: 10px;
+}
+.register_main .main_bottom .login_data ul i {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+}
+.register_main .main_bottom .login_data ul span {
+  float: left;
+  display: inline;
+  margin-left: 8px;
+  line-height: 36px;
+  padding-right: 6px;
+}
+.register_main .main_bottom .input_div {
+  display: inline;
+  padding-left: 5px;
+  float: left;
+}
+.register_main .main_bottom .input_div input {
+  height: 34px;
+  width: 258px;
+  line-height: 34px;
+  padding: 0 10px 0 30px;
+  font-size: 12px;
+  color: #000;
+  border: 1px solid #ccc;
+}
+.register_main .main_bottom .input_div input:hover {
+  border: 1px solid #999;
+}
+.register_main .main_bottom .input_div .index-1 {
+  background: url(../images/register.png) no-repeat 10px 9px;
+}
+.register_main .main_bottom .input_div .index-2, .register_main .main_bottom .input_div .index-3 {
+  background: url(../images/register.png) no-repeat 10px -180px;
+}
+.register_main .main_bottom .input_div .index-4 {
+  background: url(../images/register.png) no-repeat 10px -52px;
+}
+.register_main .main_bottom .input_div .index-5 {
+  background: url(../images/register.png) no-repeat 10px -287px;
+}
+.register_main .main_bottom .register_remember {
+  height: 25px;
+  padding-left: 140px;
+  line-height: 18px;
+  padding-top: 5px;
+  color: #666;
+}
+.register_main .main_bottom .register_remember label {
+  cursor: pointer;
+  float: left;
+  padding-right: 10px;
+}
+.register_main .main_bottom .register_remember label i {
+  display: inline-block;
+  float: left;
+  width: 13px;
+  height: 13px;
+  background: url(../images/register.png) no-repeat 0 -473px;
+}
+.register_main .main_bottom .register_remember label span {
+  float: left;
+  margin-left: 24px;
+  display: inline;
+}
+.register_main .main_bottom .register_remember a {
+  display: inline;
+  color: #0088ca;
+}
+.register_main .main_bottom .register_button {
+  padding-left: 134px;
+  height: 36px;
+}
+.register_main .main_bottom .register_button button {
+  width: 300px;
+  margin-left: 6px;
+  color: #fff;
+  background: #e6133c;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 2px;
+  text-align: center;
+  border: 0;
+}
+.register_main .main_bottom .register_button button:hover {
+  background: #fa2244;
+}
+
+.register_footer .footer_bottom {
+  padding: 20px 0 0 0;
+  background: url(../images/login-bottom-bg.png) no-repeat top;
+}
+
+/*# sourceMappingURL=register.css.map */

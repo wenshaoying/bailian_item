@@ -1,0 +1,173 @@
+.wrap {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.login_header {
+  height: 110px;
+}
+.login_header .logo {
+  margin-top: 29px;
+  float: left;
+}
+.login_header .logo .logo_img {
+  display: inline;
+  float: left;
+}
+.login_header .logo .title {
+  display: inline;
+  float: left;
+}
+
+.login_main {
+  padding: 30px 0 25px 0;
+  background: url(https://img.iblimg.com/respc-1/resources/v3.0/css/i/login-body.jpg) no-repeat center bottom;
+}
+.login_main .login_box {
+  width: 488px;
+  margin: 0 auto;
+  border: 6px solid #e2e2e2;
+  background: #fff;
+}
+.login_main .login_form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 45px 0;
+  position: relative;
+}
+.login_main .title {
+  height: 50px;
+  line-height: 45px;
+}
+.login_main .title .user_login {
+  float: left;
+  font-size: 18px;
+  color: #000;
+}
+.login_main .title a {
+  font-size: 12px;
+  float: right;
+  color: #0088cc;
+}
+.login_main .title a:hover {
+  text-decoration: underline;
+}
+.login_main .login_item {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.login_main .login_item input {
+  padding-left: 35px;
+  width: 250px;
+  height: 34px;
+  font-size: 12px;
+  vertical-align: middle;
+  padding-right: 12px;
+  color: #000;
+  border: 1px solid #ccc;
+}
+.login_main .login_item input:hover {
+  border: 1px solid #999;
+}
+.login_main .login_item i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.login_main .forget_psw {
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 10px;
+  color: #666;
+}
+.login_main .forget_psw .forget {
+  float: right;
+}
+.login_main .forget_psw .forget a {
+  color: #666;
+}
+.login_main .forget_psw .forget a:hover {
+  text-decoration: underline;
+  color: #0088cc;
+}
+.login_main button {
+  color: #fff;
+  width: 100%;
+  height: 36px;
+  background: #e6133c;
+  border: 0;
+  border-radius: 2px;
+}
+.login_main button:hover {
+  background: #fa2244;
+}
+.login_main .card_login {
+  height: 52px;
+  text-align: right;
+  line-height: 52px;
+}
+.login_main .card_login a {
+  padding-left: 23px;
+  color: #666;
+  background: url(../images/right-icon.png) no-repeat left;
+}
+.login_main .card_login a:hover {
+  text-decoration: underline;
+}
+.login_main .other_login {
+  height: 49px;
+  line-height: 49px;
+}
+.login_main .other_login .line {
+  height: 24px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  line-height: 49px;
+}
+.login_main .other_login .line span {
+  background: #fff;
+  padding: 0 15px;
+  color: #999;
+  line-height: 49px;
+}
+.login_main .login_logo {
+  width: 320px;
+  margin-left: -10px;
+  margin-top: 10px;
+  height: 22px;
+  text-align: center;
+}
+.login_main .login_logo a {
+  display: inline-block;
+  width: 66px;
+  height: 22px;
+  text-align: center;
+  float: left;
+  margin: 0 0 10px 30px;
+}
+.login_main .login_logo a:hover {
+  background-position: center top;
+}
+.login_main .login_logo .a1 {
+  background: url(https://res15.iblimg.com/respc-1/resources/v3.0/images/login-cion-1.png) no-repeat center bottom;
+}
+.login_main .login_logo .a2 {
+  background: url(https://res15.iblimg.com/respc-1/resources/v3.0/images/login-cion-2.png) no-repeat center bottom;
+}
+.login_main .login_logo .a3 {
+  background: url(https://res15.iblimg.com/respc-1/resources/v3.0/images/login-cion-3.png) no-repeat center bottom;
+}
+.login_main .login_logo .a4 {
+  background: url(https://res15.iblimg.com/respc-1/resources/v3.0/images/login-cion-4.png) no-repeat center bottom;
+}
+.login_main .login_logo .a5 {
+  background: url(https://res15.iblimg.com/respc-1/resources/v3.0/images/login-cion-5.png) no-repeat center bottom;
+}
+
+.login_footer .footer_bottom {
+  padding: 20px 0 0 0;
+  background: #fff;
+}
+
+/*# sourceMappingURL=login.css.map */

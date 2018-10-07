@@ -358,7 +358,7 @@ a {
   text-decoration: underline;
 }
 
-dl {
+.erji_sort {
   width: 1000px;
   height: 430px;
   border: 1px solid #dfdfdf;
@@ -371,47 +371,47 @@ dl {
   z-index: 11;
   display: none;
 }
-dl dd {
+.erji_sort dd {
   width: 984px;
   height: 416px;
   padding: 8px;
 }
-dl dd .right_img {
+.erji_sort dd .right_img {
   width: 240px;
   height: 422px;
   float: right;
 }
-dl dd .right_img a {
+.erji_sort dd .right_img a {
   display: block;
   margin-bottom: 2px;
 }
-dl dd .list {
+.erji_sort dd .list {
   width: 984px;
   margin: 10px 0 0 5px;
   line-height: 23px;
   position: relative;
 }
-dl dd .list .title {
+.erji_sort dd .list .title {
   width: 75px;
   font-weight: bold;
   float: left;
   margin-right: 23px;
   text-align: right;
 }
-dl dd .list .title a {
+.erji_sort dd .list .title a {
   color: #000;
 }
-dl dd .list .title a:hover {
+.erji_sort dd .list .title a:hover {
   text-decoration: none;
 }
-dl dd .list .goods {
+.erji_sort dd .list .goods {
   width: 620px;
   float: left;
   line-height: 23px;
   padding-bottom: 5px;
   border-bottom: 1px dashed #f3f3f3;
 }
-dl dd .list .goods a {
+.erji_sort dd .list .goods a {
   margin-right: 18px;
   color: #666;
   display: inline-block;
@@ -518,6 +518,176 @@ dl dd .list .goods a {
 .header_fixed .logn_register span {
   padding: 0 10px;
   font-size: 12px;
+}
+
+.right_side {
+  height: 100%;
+  width: 314px;
+  position: fixed;
+  top: 0;
+  right: -276px;
+  color: #fff;
+  z-index: 199;
+}
+.right_side .side_nav {
+  width: 38px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #333;
+}
+.right_side .side_nav .sidecss {
+  height: 40px;
+  width: 38px;
+  font-size: 12px;
+  background: #333;
+  text-align: center;
+  margin: 2px 0;
+  line-height: 40px;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: absolute;
+}
+.right_side .side_nav .sidecss:hover {
+  background: #e6133c;
+}
+.right_side .side_nav .sidecss i {
+  width: 38px;
+  height: 40px;
+  float: left;
+  display: inline-block;
+}
+.right_side .side_nav .tishi {
+  width: 86px;
+  font-size: 14px;
+  line-height: 40px;
+  color: #333;
+  position: absolute;
+  right: 38px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: default;
+  border-top-left-radius: 8%;
+  border-bottom-left-radius: 8%;
+  display: none;
+}
+.right_side .side_nav .tishi .jiantou {
+  width: 6px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  right: -6px;
+  background: url(../images/sidebar_in.png) no-repeat -6px -108px;
+}
+.right_side .side_nav .my_msg {
+  position: absolute;
+  top: 51.5px;
+  cursor: pointer;
+}
+.right_side .side_nav .my_msg i {
+  background: url(../images/sidebar_out.png) no-repeat 0 0;
+}
+.right_side .side_nav .shopcar {
+  width: 43px;
+  height: 174px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  background: #333;
+  position: absolute;
+  right: 0;
+  top: 97.5px;
+}
+.right_side .side_nav .shopcar:hover {
+  background: #e6133c;
+}
+.right_side .side_nav .shopcar i {
+  width: 24px;
+  height: 18px;
+  margin: 0 auto;
+  margin-top: 36px;
+  display: inline-block;
+  background: url(../images/sidebar_out.png) no-repeat 0 -365px;
+}
+.right_side .side_nav .shopcar span {
+  margin-top: 10px;
+  line-height: 15px;
+  display: block;
+  font-size: 14px;
+}
+.right_side .side_nav .shopcar b {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e6133c;
+  text-align: center;
+  display: block;
+  line-height: 18px;
+  margin-top: 10px;
+  color: #fff;
+}
+.right_side .side_nav .shopcar img {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.right_side .side_nav .collection {
+  top: 283.5px;
+}
+.right_side .side_nav .collection i {
+  background: url(../images/sidebar_out.png) no-repeat 0 -40px;
+}
+.right_side .side_nav .history {
+  top: 325.5px;
+}
+.right_side .side_nav .history i {
+  background: url(../images/sidebar_out.png) no-repeat 0 -80px;
+}
+.right_side .side_nav .qrcode {
+  top: 446px;
+}
+.right_side .side_nav .qrcode .tishi {
+  height: 170px;
+  width: 150px;
+  top: -70px;
+  border-radius: 0;
+}
+.right_side .side_nav .qrcode .tishi .code_title {
+  width: 82px;
+  line-height: 28px;
+  margin: 18px auto 0;
+  padding-left: 12px;
+  font-size: 12px;
+  background: url(../images/code_title.png) no-repeat left center;
+}
+.right_side .side_nav .qrcode .tishi img {
+  width: 100px;
+  height: 100px;
+}
+.right_side .side_nav .qrcode .tishi .jiantou {
+  top: 84px;
+}
+.right_side .side_nav .qrcode i {
+  background: url(../images/sidebar_out.png) no-repeat 0 -200px;
+}
+.right_side .side_nav .service {
+  top: 488px;
+}
+.right_side .side_nav .service i {
+  background: url(../images/sidebar_out.png) no-repeat 0 -240px;
+}
+.right_side .side_nav .backtop {
+  top: 530px;
+}
+.right_side .side_nav .backtop i {
+  background: url(../images/sidebar_out.png) no-repeat 0 -320px;
+}
+.right_side .side_nav .backtop i:hover {
+  background: url(../images/sidebar_out.png) no-repeat 0 -280px;
+}
+.right_side .side_details {
+  height: 571px;
+  background: #fff;
 }
 
 .banner {
@@ -1056,13 +1226,6 @@ dl dd .list .goods a {
   box-shadow: 1px 0 4px #e4e4e4, 0 1px 4px #e4e4e4, -1px 0 4px #e4e4e4, 0 -1px 4px #e4e4e4;
 }
 
-.footer {
-  min-width: 1190px;
-  background: #f3f3f3;
-  padding-top: 30px;
-  margin-top: 40px;
-}
-
 .louti {
   width: 50px;
   height: 449px;
@@ -1105,22 +1268,11 @@ dl dd .list .goods a {
   background-position: 0 -50px;
 }
 
-.right_side {
-  height: 570px;
-  width: 314px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  color: #fff;
-  z-index: 199;
-}
-.right_side .side_nav {
-  width: 38xp;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #333;
+.footer {
+  min-width: 1190px;
+  background: #f3f3f3;
+  padding-top: 30px;
+  margin-top: 40px;
 }
 
 .footer_top {

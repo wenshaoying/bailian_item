@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+//清除浮动后的高度塌陷
+@mixin clearfix() {
+  &:after {
+    content: " "; 
+    display: block; 
+    clear: both;
+	}
+}
+
+body{
+	background: #f9f9f8;
+}
+.wrap{
+	width: 950px;
+	margin: 0 auto;
+}
+//头部
+.register_header{
+	height: 110px;
+	
+	.logo{
+		margin-top: 29px;
+		float: left;
+		.logo_img{
+			display: inline;
+			float: left;
+		}
+		.title{
+			display: inline;
+			float: left;
+		}
+	}
+}
+//注册表单
+.register_main{
+	background: #fff;
+	border: 1px solid #e1dfda;
+
+	.main_top{
+		height: 30px;
+		line-height: 30px;
+		padding: 10px 20px;
+		border-bottom: 1px solid #e1dfda;
+		.title_wel{
+			float: left;
+			font-size: 16px;
+			color: #ff002a;
+
+		}
+		.title_login{
+			float: right;
+			color: #63625d;
+			a{
+				color:#0088cc;
+			}
+		}
+	}
+	.main_bottom{
+		height: auto;
+		padding: 50px 0 74px 191px;
+		.login_data{
+			padding: 10px 0;
+			.name{
+				font-size: 15px;
+				color: #333;
+				float: left;
+				width: 136px;
+				text-align: right;
+				line-height: 36px;
+				i{
+					color: #df3d36;
+				}
+			}
+			@include clearfix();
+
+			ul{
+				float: left;
+				line-height: 36px;
+				margin-left: 10px;
+
+				i{
+					display: block;
+					float: left;
+					width: 16px;
+					height: 16px;
+					margin-top: 4px;
+				}
+				span{
+					float: left;
+					display: inline;
+					margin-left: 8px;
+					line-height: 36px;
+					padding-right: 6px;
+				}
+			}
+
+		}
+		.input_div{
+			display: inline;
+			padding-left: 5px;
+			float: left;
+			input{
+				height: 34px;
+				width: 258px;
+				line-height: 34px;
+				padding: 0 10px 0 30px;
+				font-size: 12px;
+				color: #000;
+				border: 1px solid #ccc;
+				&:hover{
+					border:1px solid #999;
+				}
+			}
+			.index-1{
+				
+				background: url(../images/register.png) no-repeat 10px 9px;
+			}
+			.index-2,.index-3{
+				
+				background: url(../images/register.png) no-repeat 10px -180px;
+			}
+			.index-4{
+				
+				background: url(../images/register.png) no-repeat 10px -52px;
+			}
+			.index-5{
+				
+				background: url(../images/register.png) no-repeat 10px -287px;
+			}
+		}
+		.register_remember{
+			height: 25px;
+			padding-left: 140px;
+			line-height: 18px;
+			padding-top: 5px;
+			color: #666;
+			label{
+				cursor: pointer;
+				float: left;
+				padding-right: 10px;
+				i{
+					display: inline-block;
+					float: left;
+					width: 13px;
+					height: 13px;
+					background: url(../images/register.png) no-repeat 0 -473px;
+				}
+				span{
+					float: left;
+					margin-left: 24px;
+					display: inline;
+				}
+			}
+			a{
+				display: inline;
+				color: #0088ca;
+			}
+		}
+		.register_button{
+			padding-left: 134px;
+			height: 36px;
+			button{
+				width: 300px;
+				margin-left: 6px;
+				color: #fff;
+				background: #e6133c;
+				height: 36px;
+				font-size: 16px;
+				border-radius: 2px;
+				text-align: center;
+				border: 0;
+				&:hover{
+					background:#fa2244;
+				}
+			}
+		}
+	}
+}
+.register_footer .footer_bottom{
+	padding: 20px 0 0 0;
+	background:url(../images/login-bottom-bg.png) no-repeat top;
+}
