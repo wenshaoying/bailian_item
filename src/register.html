@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<title>欢迎注册-百联</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/other.css">
 	<link rel="stylesheet" href="css/register.css">
+
+	<script src="script/js/require.js" defer async="true" data-main="script/js/main.js"></script>
 </head>
 <body>
 <div class="register_header">
@@ -32,13 +34,13 @@
 	</div>
 	<div class="main_bottom">
 		<div class="register_form">
-			<form action="" method="post">
+			<form id="formmsg" action="http://10.31.162.94/bailian_item/php/register.php" method="post">
 
 				<div class="login_data">
 					<div class="name"><i>* </i>用户名：</div>
                     <div class="input_div">
                         <div class="input_box">
-                            <input name="loginId" id="loginId" class="index-1" maxlength="15" type="text" placeholder="6-20位字符，支持字母或字母与数字组合">
+                            <input name="username" id="username" class="index-1" maxlength="15" type="text" placeholder="6-20位字符，支持字母或字母与数字组合">
                         </div>
                     </div>
 					<ul class="prompt" style="float:left; line-height:36px;">
@@ -55,24 +57,10 @@
                         </div>
                     </div>
                     <ul class="prompt" style="float:left; line-height:36px;">
-                        <li class="prompt-text" style="display: none;"><i><img src="https://res15.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-1.png" width="16" height="16">
-                        	</i><span>密码强度</span>
-                            <i id="strength_L" class="strength-1" style="background:#cccccc none repeat scroll 0% 0%;">弱</i>
-                            <i id="strength_M" class="strength-1" style="background:#cccccc none repeat scroll 0% 0%;">中</i>
-                            <i id="strength_H" class="strength-1" style="background:#cccccc none repeat scroll 0% 0%;">强</i>
-                        </li>
-                        <li class="prompt-error" style="display: none;"><i><img src="https://res12.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-2.png" width="16" height="16"></i><span>请输入登陆密码</span></li>
-                        <li class="prompt-correct" style="display: none;">
-                        	<i><img src="https://res13.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-3.png" width="16" height="16">
-                        	</i><span>密码强度</span>
-                            <i id="strength_L" class="strength-1" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%;">弱</i>
-                            <i id="strength_M" class="strength-1" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%;">中</i>
-                            <i id="strength_H" class="strength-1" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%;">强</i>
-                        </li>
-                        <li class="prompt-caps" style="display: none;">
-							<i><img src="https://res14.iblimg.com/respc-1/resources/v3.0/css/i/pay-notice.png" height="16" width="16"></i><span>大写锁定已打开，请注意大小写！</span>
-						</li>
-                    </ul>
+					   <li class="prompt-text" style="display: none;"><i><img src="https://res12.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-1.png" width="16" height="16"></i><span>请输入密码</span></li>
+					   <li class="prompt-error" style="display: none;"><i><img src="https://res13.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-2.png" width="16" height="16"></i><span>请输入密码</span></li>
+					   <li class="prompt-correct" style="display: none;"><i><img src="https://res14.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-3.png" width="16" height="16"></i><span></span></li>
+					</ul>
 				</div>
 				<div class="login_data">
 					<div class="name"><i>* </i>确认密码：</div>
@@ -85,9 +73,7 @@
                         <li class="prompt-text" style="display: none;"><i><img src="https://res15.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-1.png" width="16" height="16"></i><span>请输入确认密码</span></li>
                         <li class="prompt-error" style="display: none;"><i><img src="https://res12.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-2.png" width="16" height="16"></i><span>请输入确认密码</span></li>
                         <li class="prompt-correct" style="display: none;"><i><img src="https://res13.iblimg.com/respc-1/resources/v3.0/css/i/v-icon-3.png" width="16" height="16"></i><span></span></li>
-                    	<li class="prompt-caps" style="display: none;">
-							<i><img src="https://res14.iblimg.com/respc-1/resources/v3.0/css/i/pay-notice.png" height="16" width="16"></i><span>大写锁定已打开，请注意大小写！</span>
-						</li>
+                    	
                     </ul>
 				</div>
 				<div class="login_data">
@@ -123,7 +109,7 @@
 	            	<label><i class="clicked"></i><span>我已阅读并同意</span></label><a id="agreement" href="http://help.bl.com/articleDetailed.html?articleId=382&amp;&amp;categoryType=help" target="_blank">《百联通会员注册协议》</a>
 	            	
 	            </div>
-				<div class="register_button"><button type="button" class="btn btn-primary sub">立即注册 完成绑定</button></div>
+				<div class="register_button"><input id="submit" type="submit" name="submit" value="立即注册 完成绑定"></div>
 					
 				
 			</form>
@@ -132,8 +118,5 @@
 </div>
 <div class="register_footer"></div>
 
-	<!-- script -->
-<script src="script/thirdplugins/jquery.js"></script>
-<script src="script/js/register.js"></script>
 </body>
 </html>

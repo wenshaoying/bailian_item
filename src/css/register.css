@@ -148,7 +148,7 @@ body {
   padding-left: 134px;
   height: 36px;
 }
-.register_main .main_bottom .register_button button {
+.register_main .main_bottom .register_button input {
   width: 300px;
   margin-left: 6px;
   color: #fff;
@@ -159,7 +159,7 @@ body {
   text-align: center;
   border: 0;
 }
-.register_main .main_bottom .register_button button:hover {
+.register_main .main_bottom .register_button input:hover {
   background: #fa2244;
 }
 

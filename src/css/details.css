@@ -57,6 +57,7 @@
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
+  position: relative;
 }
 .details_main .pro_img #spic:after {
   content: " ";
@@ -66,6 +67,16 @@
 .details_main .pro_img #spic img {
   width: 450px;
   height: 450px;
+}
+.details_main .pro_img #spic #sf {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*width: 100px;
+  height: 100px;*/
+  background: #fff;
+  opacity: 0.5;
 }
 .details_main .pro_img #bf {
   width: 450px;
@@ -79,6 +90,11 @@
   z-index: 100;
   overflow: hidden;
   display: none;
+}
+.details_main .pro_img #bf #bpic {
+  width: 800px;
+  height: 800px;
+  position: absolute;
 }
 .details_main .pro_img #ulist {
   height: 80px;
@@ -118,7 +134,6 @@
 }
 .details_main .pro_img #list ul {
   position: absolute;
-  left: -85px;
   height: 60px;
   width: 10000px;
 }
@@ -131,6 +146,9 @@
   width: 78px;
   height: 78px;
   border: 1px solid #eee;
+}
+.details_main .pro_img #list .active {
+  border: 1px solid #e00;
 }
 .details_main .pro_img .share {
   margin: 15px 0 0;
@@ -341,6 +359,9 @@
   margin-left: 10px;
   color: #333;
 }
+.pro_details .send_service .stock:hover {
+  text-decoration: underline;
+}
 .pro_details .send_service .service {
   width: 710px;
 }
@@ -378,6 +399,9 @@
 }
 .pro_details .send_service .service .service-line li a {
   color: #666;
+}
+.pro_details .send_service .service .service-line li a:hover {
+  color: #111;
 }
 .pro_details .send_service .service .service-line .service-on {
   background-position: -162px -182px;
@@ -425,8 +449,12 @@
   cursor: not-allowed;
   color: #d2d2d2;
 }
-.pro_details .item-quantity .btn-add {
+.pro_details .item-quantity .btn-add .btn-reduce {
   top: -1px;
+  background: #fff;
+}
+.pro_details .item-quantity .btn-add .btn-reduce:hover {
+  border: 1px solid #999;
   background: #fff;
 }
 .pro_details .item-quantity input {
@@ -466,6 +494,7 @@
   margin-right: 10px;
   height: 50px;
   line-height: 48px;
+  outline: none;
 }
 .pro_details .buy-cart .btn-line .buy-now {
   color: #ec595c;
@@ -477,7 +506,11 @@
 .pro_details .buy-cart .btn-line .btn-buy {
   background: #ec595c;
 }
-.pro_details .buy-cart .btn-line .collect {
+.pro_details .buy-cart .btn-line .btn-buy:hover {
+  background: #fe6e71;
+}
+.pro_details .buy-cart .collect {
+  display: block;
   width: 48px;
   height: 28px;
   float: left;
@@ -488,6 +521,10 @@
   padding: 20px 0 0;
   color: #999;
   line-height: 28px;
+}
+.pro_details .buy-cart .collect:hover {
+  color: #666;
+  background-position: -419px -109px;
 }
 .pro_details .praise {
   width: 600px;

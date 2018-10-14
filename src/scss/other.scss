@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+body{
+	font-size:12px;
+}
+a{
+	text-decoration:none;
+}
+.wrap{
+	width:1190px;
+	margin:0 auto;
+}
+
+@import "header";
+
+@import "footer";

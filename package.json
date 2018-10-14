@@ -1,0 +1,23 @@
+{
+  "name": "bailian_item",
+  "version": "1.0.0",
+  "description": "百联商城基本网页的实现",
+  "main": "build.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenshaoying/bailian_item.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenshaoying/bailian_item/issues"
+  },
+  "homepage": "https://github.com/wenshaoying/bailian_item#readme"
+}

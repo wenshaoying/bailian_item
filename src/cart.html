@@ -5,8 +5,10 @@
 	<title>购物车</title>
 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/other.css">
 	<link rel="stylesheet" href="css/cart.css">
+
+	<script src="script/js/require.js" defer async="true" data-main="script/js/main.js"></script>
 </head>
 <body>
 	<!-- 头部 -->
@@ -59,9 +61,9 @@
 						</div>
 						<div class="address-tab-form">
 							<ul class="tab">
-								<li class="select" id="sheng" onclick="selectArea('sheng')"><span>省份</span><i></i><em></em></li>
-								<li id="shi" onclick="selectArea('shi')"><span>城市</span><i></i><em></em></li>
-								<li id="qu" onclick="selectArea('qu')"><span>县区</span><i></i><em></em></li>
+								<li class="select" id="sheng"><span>省份</span><i></i><em></em></li>
+								<li id="shi"><span>城市</span><i></i><em></em></li>
+								<li id="qu"><span>县区</span><i></i><em></em></li>
 							</ul>
 							<ul class="tab-list" id="provinceNameSelect">
 								<li class="select" id="selectCity">
@@ -178,7 +180,7 @@
 			<div class="cart-head">
 				<label class="chk-line select">
 				  <div class="chk" onclick="checkBox(this)" style="display: none;"></div>
-				  <span class="name">全选</span>
+				  <span class="name"><!-- 全选 --></span>
 				</label>
 				<div class="item">商品信息</div>
 				<div class="item-price">单价（元）</div>
@@ -189,15 +191,16 @@
 			</div><div class="no-points"><i></i><div class="message">购物车快饿扁了 /(ToT)/~~</div><div class="txt">尝试买些东西再回来看看，快去 <a href="index.html">i百联首页</a> 挑选商品吧！</div>	</div>
 			
 			<!-- 购物车中有商品时的状态 -->
-			 <div class="cart-table-name">
+			 <!-- <div class="cart-table-name">
 			 	<label id="zu" class="chk-line select">
-			 		<div class="chk" onclick="checkBox(this)">
+			 		<div class="chk"">
 			 			
 			 		</div> 
+			 		<input type="checkbox" checked="checked"  style="float: left; margin-top:10px;">
 			 		<i class="bl"></i> 
 			 		<span class="name">i百联自营</span>
 			 	</label>
-			 </div>
+			 </div> -->
 
 			 <!-- 商品列表 -->
 			 <ul class="cart-table-list">
@@ -205,9 +208,10 @@
 			 		<div class="item select" id="pr-zh">
 			 			<div class="cart-table-line">
 			 				<div class="chk-line">
-			 					<div class="chk" onclick=" checkBox(this,2)">
+			 					<!-- <div class="chk"">
 			 						
-			 					</div>
+			 					</div> -->
+			 					<input type="checkbox" class="checkbox">
 			 				</div>
 			 				<div class="item-box">
 			 					<a target="blank" href="http://product.bl.com/3253351.html?bl_ad=shop_-_pc_shop_-_2" title="【官方授权】Apple MQGJ2FE/A 原装Apple usb-c 至 Lightning 连接线 (1 米)"> 
@@ -225,7 +229,7 @@
 			 					
 			 				</div>
 			 				<div class="item-price-box">
-			 					<div class="price">¥158.00
+			 					<div class="price">¥0
 			 					</div>
 			 					<div class="icon">
 			 						
@@ -234,30 +238,56 @@
 			 				<div class="number-box">
 			 					<div class="input-line">
 			 						<em class="reduce disable">-</em> 
-			 						<input class="text" onchange="inputUpdata(this,2)" type="text" value="1"> 
-			 						<em class="add" onclick="upButton(this,2)">+</em>
+			 						<input class="text" type="text" value="1"> 
+			 						<em class="add">+</em>
 			 					</div>
 			 					<div class="error">库存紧张</div>
 			 				</div>
 			 				<div class="price-box">
-			 					<div class="price">¥158.00</div>
+			 					<div class="price">¥0</div>
 			 				</div>
 			 				<div class="action-box">
-			 					<a class="add-favourite" href="javascript:void(0);" onclick="addFavorite(this)">移入收藏夹</a> <br>
-			 					<a class="delete" href="javascript:void(0);" onclick="removeGoods(this)">删除</a>
+			 					<a class="add-favourite" href="javascript:void(0);">移入收藏夹</a> <br>
+			 					<a class="delete" href="javascript:void(0);">删除</a>
 			 				</div>
 			 			</div>
 			 		</div>
 			 	</li>
 			 </ul>
 		</div>
+		<!-- 商品结算 -->
+		<div class="pay-form" id="payForm" style="display: block;">
+			<div class="pay-line">
+			  <div class="select-all select">
+			  	<!-- <div class="chk"></div> -->
+			  	<input type="checkbox" class="checkbox" checked="checked" style="float: left;margin-top:20px;">
+			  	<div class="txt">全选</div>
+			  </div>
+			  <a href="javascript:void(0);" class="txt delete"><i></i>删除</a>
+			  <a href="javascript:void(0);" class="txt">清除失效商品</a>
+			  <a href="javascript:void(0);" class="txt">移入收藏夹</a>
+			  <a class="pay" href="javascript:void(0);">去结算</a>
+			  <div class="message">
+			  	<div class="price-line">
+			    	<span class="black">商品金额（不含运费）：</span>		  	
+			  	  <span class="price"><i>¥</i><strong></strong></span>
+			  	</div>
+			  	<div class="reduce-line">
+			  		<span class="grey">优惠：</span>	
+			  		<span class="black">-<i>¥</i>0.00</span>	
+			  	</div>
+			  </div>
+			  <a class="item-show" href="javascript:void(0);">
+	              <input value="1" type="hidden" class="totalcheckedGoodsNumber">
+				已选择
+				<span>1</span>
+				件商品
+				
+			  </a>
+			</div>
+		</div>
 	</div>
 	<!--尾部  -->
 	<div class="cart_footer"></div>
-
-
-	<!-- script -->
-<script src="script/thirdplugins/jquery.js"></script>
-<script src="script/js/cart.js"></script>
 </body>
 </html>
